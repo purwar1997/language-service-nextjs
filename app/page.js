@@ -7,7 +7,7 @@ export default function Home() {
   useEffect(() => {
     const getTranslationsFromS3 = async () => {
       try {
-        await LanguageService.initialize();
+        await LanguageService.initialize('fr');
         const allTranslations = LanguageService.translate;
         console.log('All translations:', allTranslations);
         console.log('Signup heading:', allTranslations['signup_page_heading']);
