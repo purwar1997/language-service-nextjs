@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@tx/language-service": "^0.0.20-alpha.1",
+    "@tx/language-service": "^0.0.20-alpha.2",
     "next": "15.3.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
