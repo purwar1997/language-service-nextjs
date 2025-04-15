@@ -1,0 +1,5 @@
+{
+  "DEFAULT_LOG_LEVEL": "debug",
+  "LOG_TRIM_SIZE": 200,
+  "DEFAULT_LOCALE": "en"
+}
