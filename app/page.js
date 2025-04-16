@@ -2,14 +2,15 @@
 
 import { useEffect } from 'react';
 import { LanguageService } from '@tx/language-service';
-import { ENV } from '@/lib/env';
-import config from '../config.json';
+// import config from '../config.json';
 
 export default function Home() {
   useEffect(() => {
     const getTranslationsFromS3 = async () => {
       try {
-        console.log('ENV:', ENV);
+        // Fetch static asset config.json at the runtime
+        const response = await fetch('./config.json');
+        const config = await response.json();
         console.log('Config:', config);
 
         await LanguageService.initialize();
@@ -26,3 +27,6 @@ export default function Home() {
 
   return <div>Home Page</div>;
 }
+
+// Syntax => await ConfigService.initialize(sourceType, configFilePath, s3BucketURL);
+// await ConfigService.initialize('env', '../../config.json');
