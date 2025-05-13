@@ -13,7 +13,7 @@ export default function Home() {
         const config = await response.json();
         console.log('Config:', config);
 
-        await LanguageService.initialize();
+        await LanguageService.initialize('hi-IN');
         const allTranslations = LanguageService.translate;
         console.log('All translations:', allTranslations);
         console.log('Signup heading:', allTranslations['signup_page_heading']);
